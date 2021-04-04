@@ -13,7 +13,7 @@ const MetaTags = ({ title, description, canonical, image }: MetaTagsProps) => {
     <Head>
       <title>{pageTitle}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content="tmowes, world trip, worldtrip" />
+      <meta name="keywords" content="world trip, worldtrip, tmowes" />
 
       <meta property="og:site_name" content="worldtrip" />
       <meta property="og:type" content="website" />

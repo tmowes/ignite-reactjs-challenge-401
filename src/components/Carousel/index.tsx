@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react'
+import { Box, useBreakpointValue } from '@chakra-ui/react'
 import SwiperCore, { Navigation, Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -10,19 +10,25 @@ SwiperCore.use([Pagination])
 
 const Carousel = (props: CarouselProps) => {
   const { continents } = props
+  const isMedium = useBreakpointValue({
+    base: false,
+    md: true,
+  })
   return (
-    <Box maxW={1240} m="auto" mb="20">
+    <Box maxW={1240} w="100%" m="auto">
       <Swiper
         pagination={{ clickable: true }}
         navigation
         slidesPerView={1}
         spaceBetween={0}
         loop
-        style={{ height: '450px' }}
+        style={{
+          height: isMedium ? '450px' : '250px',
+        }}
       >
         {continents.map((continent) => (
           <SwiperSlide key={continent.id}>
-            <CarouselItem continent={continent} />
+            <CarouselItem {...continent} />
           </SwiperSlide>
         ))}
       </Swiper>

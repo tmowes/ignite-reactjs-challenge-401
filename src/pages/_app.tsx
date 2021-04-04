@@ -2,7 +2,7 @@ import type { AppProps } from 'next/app'
 
 import { ChakraProvider } from '@chakra-ui/react'
 
-// import * as C from '~/components'
+import * as C from '~/components'
 
 import { theme } from '../styles/theme'
 
@@ -15,7 +15,7 @@ import '../styles/swiper.sass'
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
-      {/* <C.Header /> */}
+      <C.Header />
       <Component {...pageProps} />
     </ChakraProvider>
   )

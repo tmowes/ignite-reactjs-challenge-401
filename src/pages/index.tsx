@@ -12,25 +12,28 @@ export default function Home() {
     <>
       <C.MetaTags />
       <Flex w="100vw" minH="100vh" align="center" direction="column">
-        <C.Header />
         <C.Banner src="/assets/headerBg.jpg" />
         <C.TravelTypes />
         <Box mb="12">
-          <Divider w={90} borderWidth="1px" borderColor="gray.600" />
+          <Divider
+            w={['60px', '90px']}
+            borderWidth="1px"
+            borderColor="gray.600"
+          />
         </Box>
         <Box>
           <Text
             textAlign="center"
-            fontSize="36px"
+            fontSize={['20px', '36px']}
             fontWeight="500"
-            lineHeight="54px"
+            lineHeight={['30px', '54px']}
           >
             Vamos nessa?
             <br />
             Então escolha seu continente
           </Text>
         </Box>
-        <Flex mt="12">
+        <Flex w="100%" mt={['6', '12']} mb={['10', '20']}>
           <C.Carousel continents={continentsData} />
         </Flex>
       </Flex>

@@ -2,22 +2,16 @@ import { Avatar, Box, Flex, Text, VStack } from '@chakra-ui/react'
 
 import { CitiesTop100 } from '~/types'
 
-// import { CityCardProps } from './types'
-
-// const CityCard = (props: CityCardProps) => {
-// const {
-//   city: { city_name, country_name, country_flag, image_url },
-// } = props
 const CityCard = (props: CitiesTop100) => {
   const { city_name, country_name, country_flag, image_url } = props
   return (
     <Box
-      minW={256}
+      w="256px"
       minH={279}
       borderWidth="1px"
       borderColor="yellowAlpha.500"
       borderRadius="4px"
-      mt="8"
+      mt={['0', '2']}
       overflow="hidden"
     >
       <Flex
@@ -28,7 +22,7 @@ const CityCard = (props: CitiesTop100) => {
         bgPos="center"
         bgSize="cover"
       />
-      <Flex align="center" justify="space-between" height={106} p="6">
+      <Flex align="center" justify="space-between" height="106px" p="6">
         <VStack alignItems="left">
           <Text
             fontFamily="Barlow"

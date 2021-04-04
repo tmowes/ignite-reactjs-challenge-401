@@ -2,14 +2,12 @@ import Link from 'next/link'
 
 import { Flex, Text } from '@chakra-ui/react'
 
-import { CarouselItemProps } from './types'
+import { Continent } from '~/types'
 
-const CarouselItem = (props: CarouselItemProps) => {
-  const {
-    continent: { image_url, name, slug, title },
-  } = props
+const CarouselItem = (props: Continent) => {
+  const { continent, continent_name, image_url, title } = props
   return (
-    <Link href={`/continents/${slug}`} passHref>
+    <Link href={`/continents/${continent}`} passHref>
       <Flex
         as="a"
         bg="gray.500"
@@ -24,19 +22,20 @@ const CarouselItem = (props: CarouselItemProps) => {
       >
         <Text
           textAlign="center"
-          fontSize="48px"
+          fontSize={['24px', '48px']}
           fontWeight="700"
-          lineHeight="72px"
+          lineHeight={['36px', '72px']}
           color="gray.200"
         >
-          {name}
+          {continent_name}
         </Text>
         <Text
           textAlign="center"
-          fontSize="24px"
+          fontSize={['14px', '24px']}
           fontWeight="700"
-          lineHeight="36px"
+          lineHeight={['21px', '36px']}
           color="gray.300"
+          px={['16', '24']}
         >
           {title}
         </Text>

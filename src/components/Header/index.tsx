@@ -13,10 +13,10 @@ const Header = () => {
       as="header"
       w="100%"
       maxW={1240}
-      h="24"
-      p="6"
+      h={['12', '24']}
       align="center"
       mx="auto"
+      px="4"
     >
       {navBack && (
         <Link href="/" passHref>
@@ -25,7 +25,12 @@ const Header = () => {
           </Button>
         </Link>
       )}
-      <Image src="/assets/logo.svg" alt="worldtrip logo" m="auto" />
+      <Image
+        src="/assets/logo.svg"
+        h={['4', '10']}
+        alt="worldtrip logo"
+        m="auto"
+      />
       {navBack && (
         <Button as="a" variant="white" alignItems="center" opacity={0}>
           <Icon as={FiChevronLeft} pr="1" fontSize={['16', '24', '32']} />

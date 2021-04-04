@@ -1,7 +1,7 @@
 export type Continent = {
   id: string
-  name: string
-  slug: string
+  continent: string
+  continent_name: string
   title: string
   image_url: string
 }

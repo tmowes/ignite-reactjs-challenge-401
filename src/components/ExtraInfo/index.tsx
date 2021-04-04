@@ -10,16 +10,16 @@ const ExtraInfo = (props: ExtraInfoProps) => {
       <Box textAlign="center">
         <Heading
           color="yellow.500"
-          fontSize="48px"
-          lineHeight="72px"
+          fontSize={['24px', '48px']}
+          lineHeight={['36px', '72px']}
           fontWeight="600"
         >
           {value}
         </Heading>
         <Text
-          fontSize="24px"
-          lineHeight="36px"
-          fontWeight="600"
+          fontSize={['18px', '24px']}
+          lineHeight={['27px', '36px']}
+          fontWeight={['400', '600']}
           alignItems="center"
         >
           {text}
@@ -30,7 +30,7 @@ const ExtraInfo = (props: ExtraInfoProps) => {
               color="gray.600"
               borderRadius="2"
               placement="bottom"
-              fontSize="16px"
+              fontSize={['10px', '16px']}
               fontWeight="500"
               hasArrow={false}
               maxW={240}
@@ -38,7 +38,7 @@ const ExtraInfo = (props: ExtraInfoProps) => {
               <span>
                 <Icon
                   as={RiInformationLine}
-                  fontSize="20"
+                  fontSize={['14', '20']}
                   color="grayAlpha.500"
                   ml="1"
                 />
