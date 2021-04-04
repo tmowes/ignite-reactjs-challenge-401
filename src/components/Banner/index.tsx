@@ -1,4 +1,4 @@
-import { Flex, Image, Text, Box, Heading, HStack } from '@chakra-ui/react'
+import { Flex, Image, Text, Box, Heading } from '@chakra-ui/react'
 
 import { BannerProps } from './types'
 
@@ -7,25 +7,45 @@ const Banner = (props: BannerProps) => {
   return (
     <Flex
       w="100%"
-      h={335}
-      backgroundImage={`url(${src})`}
-      backgroundRepeat="no-repeat"
-      backgroundSize="cover"
+      h="340px"
+      bgImage={`url(${src})`}
+      // bgRepeat="no-repeat"
+      bgPos="center"
+      bgSize="cover"
     >
-      <HStack maxWidth={1440} m="auto" spacing="40">
-        <Box w="lg" pl="4">
-          <Heading fontWeight="medium" fontSize="4xl" lineHeight="tall">
+      <Flex
+        w="100%"
+        maxW={1240}
+        align="center"
+        justify="space-between"
+        px="10"
+        mx="auto"
+      >
+        <Box mt="4">
+          <Heading
+            fontSize="36px"
+            lineHeight="54px"
+            fontWeight="500"
+            color="gray.200"
+            mb="4"
+          >
             5 Continentes,
-            <br /> infinitas possibilidades.
+            <br />
+            infinitas possibilidades.
           </Heading>
-          <Text fontSize="lg" mt="4" mb="6" letterSpacing="tight">
-            Chegou a hora de tirar do papel a viagem que você sempre sonhou.
+          <Text fontSize="20px" lineHeight="30px" color="gray.200">
+            Chegou a hora de tirar do papel a viagem que você
+            <br />
+            sempre sonhou.
           </Text>
         </Box>
-        <Box w="lg" pl="20" pt="20">
-          <Image src="/assets/airplane.svg" />
+        <Box w="lg">
+          <Image
+            src="/assets/airplane.svg"
+            transform="translateX(80px) translateY(54px)"
+          />
         </Box>
-      </HStack>
+      </Flex>
     </Flex>
   )
 }

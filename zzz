@@ -1,0 +1,5 @@
+http://localhost:3333/continents?continent=africa
+http://localhost:3333/continents?continent=america
+http://localhost:3333/continents?continent=asia
+http://localhost:3333/continents?continent=europa
+http://localhost:3333/continents?continent=oceania

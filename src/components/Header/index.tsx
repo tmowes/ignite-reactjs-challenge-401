@@ -1,9 +1,8 @@
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-import { Flex, Icon, IconButton } from '@chakra-ui/react'
+import { Button, Flex, Icon, Image } from '@chakra-ui/react'
 import { FiChevronLeft } from 'react-icons/fi'
-
-import Logo from './Logo'
 
 const Header = () => {
   const { asPath } = useRouter()
@@ -13,22 +12,25 @@ const Header = () => {
     <Flex
       as="header"
       w="100%"
-      maxWidth={1480}
+      maxW={1240}
       h="24"
-      mx="auto"
-      px="6"
+      p="6"
       align="center"
+      mx="auto"
     >
       {navBack && (
-        <IconButton
-          aria-label="Volta Navegação"
-          icon={<Icon as={FiChevronLeft} />}
-          fontSize={['16', '24', '32']}
-          variant="unstyled"
-          mr="2"
-        />
+        <Link href="/" passHref>
+          <Button as="a" variant="white" alignItems="center">
+            <Icon as={FiChevronLeft} pr="1" fontSize={['16', '24', '32']} />
+          </Button>
+        </Link>
       )}
-      <Logo />
+      <Image src="/assets/logo.svg" alt="worldtrip logo" m="auto" />
+      {navBack && (
+        <Button as="a" variant="white" alignItems="center" opacity={0}>
+          <Icon as={FiChevronLeft} pr="1" fontSize={['16', '24', '32']} />
+        </Button>
+      )}
     </Flex>
   )
 }
